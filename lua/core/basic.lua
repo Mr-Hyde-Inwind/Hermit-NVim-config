@@ -10,3 +10,5 @@ vim.opt.shiftwidth = 0
 
 vim.opt.autoread = true
 
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
