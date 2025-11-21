@@ -18,7 +18,7 @@ return {
             default = { "path", "snippets", "buffer", "lsp" }
         },
         cmdline = {
-            sources = function() 
+            sources = function()
                 local cmd_type = vim.fn.getcmdtype()
                 if cmd_type == "/" then
                     return { "buffer" }

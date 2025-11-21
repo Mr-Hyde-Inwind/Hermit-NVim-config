@@ -32,6 +32,14 @@ return {
             },
 
             pyright = {},
+            ["clangd"] = {
+                offsetEncoding = {"utf-8", "utf-16"},
+                textDocument = {
+                    completion = {
+                        editsNearCursor = true
+                    }
+                }
+            },
         }
 
         for server, config in pairs(servers) do
@@ -40,7 +48,7 @@ return {
 
         vim.cmd("LspStart")
         vim.diagnostic.config({
-            -- virtual_lines = true,
+            virtual_lines = true,
             virtual_text = true,
             update_in_insert = true,
         })
