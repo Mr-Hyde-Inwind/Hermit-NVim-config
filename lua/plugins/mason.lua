@@ -30,8 +30,6 @@ return {
                     }
                 }
             },
-
-            pyright = {},
             ["clangd"] = {
                 offsetEncoding = {"utf-8", "utf-16"},
                 textDocument = {
@@ -40,6 +38,20 @@ return {
                     }
                 }
             },
+            ["basedpyright"] = {
+                settings = {
+                    basedpyright = {
+                        analysis = {
+                            typeCheckingMode = "standard",
+                            reportMissingTypeStubs = "none",
+                            autoSearchPaths = true,
+                            useLibraryCodeForTypes = true,
+                            diagnosticMode = "openFilesOnly"
+                        },
+                    },
+                },
+                single_file_support = true,
+            }
         }
 
         for server, config in pairs(servers) do
