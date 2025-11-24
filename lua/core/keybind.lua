@@ -5,6 +5,7 @@ local map = vim.keymap.set
 
 -- split window
 map("n", "<leader>vs", "<Cmd>vsplit<CR>")
+map("n", "<leader>s", "<Cmd>split<CR>")
 
 map("n", "<leader>bn", "<Cmd>bnext<CR>")
 
