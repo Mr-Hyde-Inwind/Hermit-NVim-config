@@ -17,6 +17,16 @@ return {
             end
             local nvim_lsp = require("mason-lspconfig.mappings.server").package_to_lspconfig[name]
             config.capabilities = require("blink.cmp").get_lsp_capabilities()
+
+            -- code jumping
+            config.on_attach = function(_, bufnr)
+                local attach_opts = {noremap=true, silent=true, buffer=bufnr}
+                vim.keymap.set('n', 'gd', vim.lsp.buf.definition, attach_opts)
+                vim.keymap.set('n', 'K', vim.lsp.buf.hover, attach_opts)
+                vim.keymap.set('n', 'gr', vim.lsp.buf.references, attach_opts)
+                vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, attach_opts)
+            end
+
             require("lspconfig")[nvim_lsp].setup(config)
         end
 
