@@ -51,7 +51,17 @@ return {
                     },
                 },
                 single_file_support = true,
-            }
+            },
+            ["vtsls"] = {
+                settings = {
+                    vtsls = {
+                        autoUseWorkspaceTsdk = true,
+                    },
+                    typescript = {
+                        tsdk = "./node_modules/typescript/lib",
+                    }
+                }
+            },
         }
 
         for server, config in pairs(servers) do
