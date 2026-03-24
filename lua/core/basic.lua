@@ -24,3 +24,8 @@ vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHo
   pattern = "*",
   command = "silent! checktime",
 })
+
+-- highlight trailing spaces
+vim.cmd([[highlight ExtraWhitespace ctermbg=red guibg=red]])
+vim.cmd([[match ExtraWhitespace /\s\+$/]])
+
