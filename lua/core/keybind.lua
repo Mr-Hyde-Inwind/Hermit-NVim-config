@@ -31,3 +31,6 @@ map('n', '<C-Left>', ':vertical resize -4<CR>', opts)
 -- quit neovim
 map('n', '<leader>qq', '<cmd>confirm qa<CR>', {desc = 'Quit all (confirm)'})
 
+
+-- Delete word after cursor
+map('n', '<A-d>', 'dw')
