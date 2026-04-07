@@ -34,3 +34,6 @@ map('n', '<leader>qq', '<cmd>confirm qa<CR>', {desc = 'Quit all (confirm)'})
 
 -- Delete word after cursor
 map('n', '<A-d>', 'dw')
+
+-- Macro
+map('n', '<leader>r', '@r')
